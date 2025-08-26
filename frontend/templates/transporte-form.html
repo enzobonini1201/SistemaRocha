@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Transporte</title>
+</head>
+<body>
+<h2>Formulário Transporte</h2>
+<form th:action="@{'/transporte'}" th:object="${transporte}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    Nome: <input type="text" th:field="*{nome}"/><br>
+    <button type="submit">Salvar</button>
+</form>
+</body>
+</html>

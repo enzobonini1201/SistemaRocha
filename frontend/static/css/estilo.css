@@ -1,0 +1,16 @@
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f2f2f2; }
+header { background:#003366; color:#fff; padding:10px 16px; display:flex; align-items:center; justify-content:space-between; }
+nav a, nav button { color:#fff; margin-right:12px; background:transparent; border:none; cursor:pointer; font-size:14px; }
+nav .dropdown { display:inline-block; position:relative; }
+nav .dropdown-content { display:none; position:absolute; background:#ffffff; color:#333; min-width:160px; box-shadow:0 8px 16px rgba(0,0,0,.2); z-index:1; }
+nav .dropdown-content a { color:#333; padding:8px 12px; display:block; text-decoration:none; }
+nav .dropdown:hover .dropdown-content { display:block; }
+.logout { background:#c62828; padding:6px 10px; border-radius:4px; }
+.container { max-width:900px; margin:24px auto; background:#fff; padding:16px; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+form label { display:block; margin-top:8px; font-weight:bold; }
+form input, form select { width:100%; padding:8px; margin-top:4px; }
+form button { margin-top:12px; padding:10px 16px; }
+table { width:100%; border-collapse:collapse; margin-top:12px; }
+th, td { border:1px solid #ddd; padding:8px; }
+th { background:#eee; }
+.actions button { margin-right:6px; }

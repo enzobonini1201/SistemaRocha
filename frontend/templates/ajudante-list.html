@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Ajudante</title>
+</head>
+<body>
+<h2>Lista de Ajudante</h2>
+<a th:href="@{'/ajudante/new'}">Novo Ajudante</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ações</th>
+    </tr>
+    <tr th:each="ajudante : ${list}">
+        <td th:text="${ajudante.id}"></td>
+        <td th:text="${ajudante.nome}"></td>
+        <td>
+            <a th:href="@{'/ajudante/' + ajudante.id}">Editar</a>
+            <a th:href="@{'/ajudante/delete/' + ajudante.id}">Excluir</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

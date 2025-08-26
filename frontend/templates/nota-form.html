@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Nota</title>
+</head>
+<body>
+<h2>Formulário Nota</h2>
+<form th:action="@{'/nota'}" th:object="${nota}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    Nome: <input type="text" th:field="*{nome}"/><br>
+    <button type="submit">Salvar</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Transporte</title>
+</head>
+<body>
+<h2>Lista de Transporte</h2>
+<a th:href="@{'/transporte/new'}">Novo Transporte</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ações</th>
+    </tr>
+    <tr th:each="transporte : ${list}">
+        <td th:text="${transporte.id}"></td>
+        <td th:text="${transporte.nome}"></td>
+        <td>
+            <a th:href="@{'/transporte/' + transporte.id}">Editar</a>
+            <a th:href="@{'/transporte/delete/' + transporte.id}">Excluir</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

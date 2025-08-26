@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Agregado</title>
+</head>
+<body>
+<h2>Lista de Agregado</h2>
+<a th:href="@{'/agregado/new'}">Novo Agregado</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ações</th>
+    </tr>
+    <tr th:each="agregado : ${list}">
+        <td th:text="${agregado.id}"></td>
+        <td th:text="${agregado.nome}"></td>
+        <td>
+            <a th:href="@{'/agregado/' + agregado.id}">Editar</a>
+            <a th:href="@{'/agregado/delete/' + agregado.id}">Excluir</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
